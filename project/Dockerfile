@@ -3,7 +3,7 @@ LABEL maintainer="Sungwon Jung"
 WORKDIR /usr/work
 COPY ./techtrends/requirements.txt ./
 RUN pip install -r requirements.txt
-COPY ./ ./
+COPY ./techtrends/ ./
 RUN python init_db.py
 RUN pip install -r requirements.txt
 EXPOSE 3111
