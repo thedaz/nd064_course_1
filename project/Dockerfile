@@ -1,7 +1,7 @@
 FROM python:3.8-alpine
 LABEL maintainer="Sungwon Jung"
 WORKDIR /usr/work
-COPY ./project/requirements.txt ./
+COPY ./techtrends/requirements.txt ./
 RUN pip install -r requirements.txt
 COPY ./ ./
 RUN python init_db.py
