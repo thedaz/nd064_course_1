@@ -1,0 +1,41 @@
+## Docker commands used to build the application
+docker build -t techtrends .
+
+## Docker commands used to run the application
+docker run -d -p 7111:3111 techtrends
+
+## Docker commands used to get the application logs
+docker logs 113547e89895034cfde54db1c9f49e85225dee8b92593a06cf2832f3ef355095
+
+## Logs from the container running the TechTrends application
+% docker logs 113547e89895034cfde54db1c9f49e85225dee8b92593a06cf2832f3ef355095
+
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+WARNING:werkzeug:2023-12-20 11:41:48,873   * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug:2023-12-20 11:41:48,873   * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:2023-12-20 11:43:58,733  172.17.0.1 - - [20/Dec/2023 11:43:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2023-12-20 11:43:58,785  172.17.0.1 - - [20/Dec/2023 11:43:58] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:2023-12-20 11:44:03,460  172.17.0.1 - - [20/Dec/2023 11:44:03] "GET /healthz HTTP/1.1" 200 -
+DEBUG:root:2023-12-20 11:44:07,193  post_id 999 not exist
+INFO:werkzeug:2023-12-20 11:44:07,198  172.17.0.1 - - [20/Dec/2023 11:44:07] "GET /999 HTTP/1.1" 404 -
+INFO:werkzeug:2023-12-20 11:44:07,223  172.17.0.1 - - [20/Dec/2023 11:44:07] "GET /static/css/main.css HTTP/1.1" 304 -
+DEBUG:root:2023-12-20 11:44:10,826  get_post: 2020 CNCF Annual Report
+INFO:werkzeug:2023-12-20 11:44:10,836  172.17.0.1 - - [20/Dec/2023 11:44:10] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:2023-12-20 11:44:10,860  172.17.0.1 - - [20/Dec/2023 11:44:10] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:2023-12-20 11:44:15,592  172.17.0.1 - - [20/Dec/2023 11:44:15] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:2023-12-20 11:44:15,615  172.17.0.1 - - [20/Dec/2023 11:44:15] "GET /static/css/main.css HTTP/1.1" 304 -
+DEBUG:root:2023-12-20 11:44:23,123  created: TITLE
+INFO:werkzeug:2023-12-20 11:44:23,125  172.17.0.1 - - [20/Dec/2023 11:44:23] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:2023-12-20 11:44:23,133  172.17.0.1 - - [20/Dec/2023 11:44:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2023-12-20 11:44:23,160  172.17.0.1 - - [20/Dec/2023 11:44:23] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:2023-12-20 11:45:08,398  172.17.0.1 - - [20/Dec/2023 11:45:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2023-12-20 11:45:08,438  172.17.0.1 - - [20/Dec/2023 11:45:08] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:2023-12-20 11:45:57,937  172.17.0.1 - - [20/Dec/2023 11:45:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2023-12-20 11:45:57,962  172.17.0.1 - - [20/Dec/2023 11:45:57] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:2023-12-20 11:45:58,627  172.17.0.1 - - [20/Dec/2023 11:45:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2023-12-20 11:45:58,649  172.17.0.1 - - [20/Dec/2023 11:45:58] "GET /static/css/main.css HTTP/1.1" 304 -
